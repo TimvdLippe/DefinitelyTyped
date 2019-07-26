@@ -9,7 +9,7 @@ export as namespace resemble;
 /**
  * Retrieve basic analysis for a single image (add compareTo to compare with another).
  */
-declare function Resemble(image: string | ImageData): Resemble.ResembleAnalysis;
+declare function Resemble(image: string | ImageData | Buffer): Resemble.ResembleAnalysis;
 
 declare namespace Resemble {
   /**
@@ -37,7 +37,7 @@ declare namespace Resemble {
     /**
      * Compare this image to another image, to get resemblance data
      */
-    compareTo(fileData: string | ImageData): ResembleComparison;
+    compareTo(fileData: string | ImageData | Buffer): ResembleComparison;
   }
 
   interface ResembleAnalysisResult {
